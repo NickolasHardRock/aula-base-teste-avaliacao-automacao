@@ -14,6 +14,11 @@ app.use(express.json())
 
 app.post('/api/v1/login', apiUser.Login)
 
+app.get('/', (req, res) => {
+  res.send("Olá Mundo!");
+})
+
+
 app.use('/api/v1/organization', organizationRouter)
 app.use('/api/v1/user', userRouter)
 app.use('/api/v1/product', productRouter)
